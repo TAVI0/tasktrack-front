@@ -13,39 +13,33 @@ export default function TaskFilter({ status, date, onChange }: TaskFilterProps) 
 
   return (
     <div className="bg-gray-800 p-4 rounded-lg mb-6 mt-4">
-      <div className="flex items-center gap-4">
+      <div className="flex flex-wrap items-end gap-4">
         {/* Filtro por estado */}
-        <div className="flex flex-col">
-          <select
-            value={status}
-            onChange={e => onChange({ status: e.target.value as TaskStatusFilter, date })}
-            className="bg-gray-700 text-gray-100 px-3 py-1 rounded focus:outline-none"
-          >
-            <option value="all">Todas</option>
-            <option value="pending">Pendientes</option>
-            <option value="completed">Completadas</option>
-          </select>
-        </div>
+        <select
+          value={status}
+          onChange={e => onChange({ status: e.target.value as TaskStatusFilter, date })}
+          className="w-full sm:w-40 bg-gray-700 text-gray-100 px-3 py-1 rounded focus:outline-none"
+        >
+          <option value="all">Todas</option>
+          <option value="pending">Pendientes</option>
+          <option value="completed">Completadas</option>
+        </select>
 
         {/* Filtro por fecha de creación */}
-        <div className="flex flex-col">
-          <input
-            type="date"
-            value={date}
-            onChange={e => onChange({ status, date: e.target.value })}
-            className="bg-gray-700 text-gray-100 px-3 py-1 rounded focus:outline-none"
-          />
-        </div>
+        <input
+          type="date"
+          value={date}
+          onChange={e => onChange({ status, date: e.target.value })}
+          className="w-full sm:w-40 bg-gray-700 text-gray-100 px-3 py-1 rounded focus:outline-none"
+        />
 
         {/* Botón limpiar */}
-        <div className="flex flex-col justify-end">
-          <button
-            onClick={handleClear}
-            className="bg-red-600 hover:bg-red-500 px-3 py-1 rounded text-white transition"
-          >
-            Limpiar
-          </button>
-        </div>
+        <button
+          onClick={handleClear}
+          className="w-full sm:w-auto bg-red-600 hover:bg-red-500 px-3 py-1 rounded text-white transition"
+        >
+          Limpiar
+        </button>
       </div>
     </div>
   );
