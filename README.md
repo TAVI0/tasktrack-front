@@ -44,13 +44,6 @@
 
    > **Nota:** Vite expone solo variables que empiezan con `VITE_`.
 
-## Scripts disponibles
-
-| Comando           | Descripción                                |
-| ----------------- | ------------------------------------------ |
-| `npm run dev`     | Inicia el servidor de desarrollo (Vite).   |
-| `npm run build`   | Compila la app para producción en `dist/`. |
-| `npm run preview` | Sirve la versión de producción localmente. |
 
 ## Estructura principal
 

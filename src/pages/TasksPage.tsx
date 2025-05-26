@@ -129,7 +129,7 @@ useEffect(() => {
         ))}
         <button
           onClick={openNewModal}
-          className="fixed bottom-10 right-10 w-12 h-12 rounded-full bg-blue-600 flex items-center justify-center text-2xl hover:bg-blue-500"
+          className="fixed bottom-50 right-90 w-20 h-20 rounded-full bg-blue-600 flex items-center justify-center text-2xl hover:bg-blue-500"
         >
           +
         </button>
