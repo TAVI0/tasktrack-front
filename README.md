@@ -79,12 +79,3 @@ src/
 * **Tema oscuro**: aplicado globalmente vía Tailwind en `index.css`.
 * **Iconos SVG**: mediante componentes (Heroicons o SVGs propios) para acciones.
 
----
-
-### Contribuciones
-
-¡Las contribuciones son bienvenidas! Abre un *issue* o un *pull request* para mejorar el proyecto.
-
----
-
-**License**: MIT
