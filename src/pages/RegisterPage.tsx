@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { authService } from '../services/authService';
 import { Link } from 'react-router-dom';
+import EyeIcon from '../components/EyeIcon';
 
 interface RegisterPageProps {
   onRegisterSuccess: () => void;
@@ -79,10 +80,10 @@ export default function RegisterPage({ onRegisterSuccess }: RegisterPageProps) {
           <button
             type="button"
             onClick={() => setShowPassword(prev => !prev)}
-            className="absolute inset-y-0 right-0 px-3 flex items-center text-gray-400"
+            className="absolute inset-y-11 right-0 pr-3 flex items-center text-gray-400 cursor-pointer"
             tabIndex={-1}
           >
-            {showPassword ? '🙈' : '👁️'}
+             <EyeIcon name={showPassword ? 'eye-off' : 'eye'} className="h-6 w-6" />
           </button>
         </div>
 
@@ -99,10 +100,10 @@ export default function RegisterPage({ onRegisterSuccess }: RegisterPageProps) {
           <button
             type="button"
             onClick={() => setShowConfirm(prev => !prev)}
-            className="absolute inset-y-0 right-0 px-3 flex items-center text-gray-400"
+            className="absolute inset-y-11 right-0 pr-3 flex items-center text-gray-400 cursor-pointer"
             tabIndex={-1}
           >
-            {showConfirm ? '🙈' : '👁️'}
+             <EyeIcon name={showConfirm ? 'eye-off' : 'eye'} className="h-6 w-6" />
           </button>
         </div>
 
